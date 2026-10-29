@@ -12,6 +12,8 @@ import GRDBSQLite
 
 #if canImport(string_h)
 import string_h
+#elseif canImport(Android) // Swift 6.3+ Android SDKs have no Glibc module
+import Android
 #elseif os(Linux) || os(Android)
 import Glibc
 #elseif os(macOS) || os(iOS) || os(watchOS) || os(tvOS) || os(visionOS)
